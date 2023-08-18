@@ -1,0 +1,121 @@
+.settings {
+    margin: 2rem 0 4rem;
+}
+
+.settings__title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: $black;
+
+
+    &--sm {
+        font-size: 2.4rem;
+        margin-bottom: 0rem;
+    }
+}
+
+.settings__block {
+    margin-bottom: 2rem;
+    display: block;
+
+    &.hidden {
+        display: none;
+    }
+
+    &:last-child {
+        margin-top: 5rem;
+    }
+}
+
+.settings__items {
+    display: flex;
+}
+
+.settings__item {
+    color: $black;
+    margin-right: 2.5rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 1rem 0;
+    word-spacing: -0.5rem;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &.active {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            left: 0;
+            bottom: 0;
+            height: 1.5px;
+            width: 100%;
+            background-color: $black;
+            transition: all linear 0.5s;
+            animation: underline linear 1s;
+
+            @keyframes underline {
+                from {
+                    width: 0%;
+                }
+                to {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.settings__buttons {
+    margin-top: 2rem;
+    display: flex;
+}
+
+.settings__input {
+    width: 40rem;
+    outline: none;
+    border: 2px solid $black;
+    font-family: 'Source Code Pro', 'Arial', sans-serif;
+    padding: 2rem;
+    font-size: 1.8rem;
+    transition: all linear 0.5s;
+    margin-right: 2.5rem;
+
+    &:focus {
+        border-radius: 4rem;
+    }
+}
+
+.settings__btn {
+    outline: none;
+    border: 2px solid $black;
+    font-family: 'Source Code Pro', 'Arial', sans-serif;
+    padding: 2rem 4rem;
+    font-size: 1.8rem;
+    transition: all linear .5s;
+
+    &:hover,
+    &:focus {
+        border-radius: 4rem;
+        background-color: $primary;
+    }
+}
+
+.settings__result {
+    margin: 2rem 0;
+    font-size: 1.8rem;
+}
+
+.result__copy {
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+    display: none;
+
+    &.show {
+        display: block;
+    }
+}

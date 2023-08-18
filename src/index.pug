@@ -1,3 +1,4 @@
+doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
@@ -5,7 +6,31 @@ html(lang="en")
         link(rel="stylesheet", href="css/style.min.css")
         title Главная
     body
+        include html/mixins
         include html/header
-        main.page MAIN
+        main.main
+            .wrapper
+                .intro
+                    h1.intro__title Lorem Generator
+                    p.intro__subtitle Lorem Generator - это сервис онлайн-генерации замещающего текста, текста-заполнителя для вставки с выбором языка. Для генерации текста выберите его настройки и нажмите "Сгенерировать".
+                .settings
+                    h2.settings__title Настройки
+                    +settings__block("язык")
+                        .settings__item.active английский
+                        .settings__item русский
+                    +settings__block("тип генерации")
+                        .settings__item.active по количеству символов
+                        .settings__item по количеству слов
+                        .settings__item по количеству предложений
+                    form.settings__block
+                        h3.settings__title.settings__title--sm Введите количество
+                        .settings__buttons
+                            input.settings__input(type="text", placeholder="Введите количество")
+                            button.settings__btn(type="button") Сгенерировать
+                    .settings__block.hidden
+                        h3.settings__title.settings__title--sm Результат генерации
+                        .settings__result
+                        button.settings__btn(type="button") Скопировать
+                        .result__copy Сгенерированный текст скопирован
         include html/footer
         script(src="js/app.min.js") 

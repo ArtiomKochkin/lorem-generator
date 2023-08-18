@@ -1,15 +1,66 @@
-
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <link rel="stylesheet" href="css/style.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Главная</title>
   </head>
   <body>
-    <header class="header">HEADER</header>
-    <main class="page">MAIN</main>
-    <footer class="footer">FOOTER</footer>
+    <header class="header">
+      <div class="wrapper wrapper--header">
+        <div class="header__logo">Lorem GENERATOR</div>
+        <div class="header__gh"><a class="header__link" href="https://github.com/ArtiomKochkin" target="_blank"><img class="header__img" src="img/svg/github-header.svg" width="40"></a></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="wrapper">
+        <div class="intro">
+          <h1 class="intro__title">Lorem Generator</h1>
+          <p class="intro__subtitle">Lorem Generator - это сервис онлайн-генерации замещающего текста, текста-заполнителя для вставки с выбором языка. Для генерации текста выберите его настройки и нажмите "Сгенерировать".</p>
+        </div>
+        <div class="settings">
+          <h2 class="settings__title">Настройки</h2>
+              <div class="settings__block">
+                <h3 class="settings__title settings__title--sm">Выберите язык</h3>
+                <div class="settings__items">
+                  <div class="settings__item active">английский</div>
+                  <div class="settings__item">русский</div>
+                </div>
+              </div>
+              <div class="settings__block">
+                <h3 class="settings__title settings__title--sm">Выберите тип генерации</h3>
+                <div class="settings__items">
+                  <div class="settings__item active">по количеству символов</div>
+                  <div class="settings__item">по количеству слов</div>
+                  <div class="settings__item">по количеству предложений</div>
+                </div>
+              </div>
+          <form class="settings__block">
+            <h3 class="settings__title settings__title--sm">Введите количество</h3>
+            <div class="settings__buttons">
+              <input class="settings__input" type="text" placeholder="Введите количество">
+              <button class="settings__btn" type="button">Сгенерировать</button>
+            </div>
+          </form>
+          <div class="settings__block hidden">
+            <h3 class="settings__title settings__title--sm">Результат генерации</h3>
+            <div class="settings__result"></div>
+            <button class="settings__btn" type="button">Скопировать</button>
+            <div class="result__copy">Сгенерированный текст скопирован</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="wrapper wpapper--footer"> 
+        <div class="footer__links"><a class="footer__link" href="tel:+79069967386" target="_blank">+7 (906) 996-73-86</a><a class="footer__link" href="mailto: artiom.kochkin@yandex.ru" target="_blank">artiom.kochkin@yandex.ru</a>
+        </div>
+        <div class="footer__socials"><a class="footer__link" href="https://vk.com/bastard300" target="_blank"><img class="footer__img" width="40" alt="vk" src="../img/svg/vk.svg"></a><a class="footer__link" href="https://github.com/ArtiomKochkin" target="_blank"><img class="footer__img" width="40" alt="github" src="../img/svg/github.svg"></a><a class="footer__link" href="https://www.instagram.com/artyom_kch" target="_blank"><img class="footer__img" width="40" alt="instagram" src="../img/svg/instagram.svg"></a>
+        </div>
+      </div>
+      <div class="footer__copyright">Copyright ©2023 Артем Кочкин. Все права защищены.</div>
+    </footer>
     <script src="js/app.min.js"> </script>
   </body>
 </html>

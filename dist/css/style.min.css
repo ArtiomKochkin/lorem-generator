@@ -56,6 +56,30 @@ button {
   cursor: pointer;
 }
 
+/* source-code-pro-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/source-code-pro-v22-cyrillic_latin-regular.woff2") format("woff2"), url("../fonts/source-code-pro-v22-cyrillic_latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* source-code-pro-500 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/source-code-pro-v22-cyrillic_latin-500.woff2") format("woff2"), url("../fonts/source-code-pro-v22-cyrillic_latin-500.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* source-code-pro-700 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/source-code-pro-v22-cyrillic_latin-700.woff2") format("woff2"), url("../fonts/source-code-pro-v22-cyrillic_latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -65,7 +89,203 @@ html {
 }
 
 body {
-  background-color: black;
+  background-color: azure;
   font-size: 1.4rem;
-  color: white;
+  font-family: "Source Code Pro", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #212121;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+.wrapper--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  background-color: #fbe7ff;
+  padding: 1.5rem 0;
+}
+
+.header__logo {
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #212121;
+}
+
+.footer {
+  background-color: #fbe7ff;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.footer__link {
+  margin: 0 1.5rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #212121;
+  transition: all linear 0.3s;
+}
+.footer__link:hover {
+  color: #b99999;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+}
+
+.footer__social {
+  margin: 0 1.5rem;
+}
+
+.footer__copyright {
+  color: #212121;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #ededed;
+}
+
+.intro {
+  max-width: 70rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 6rem 0 3rem;
+}
+
+.intro__title {
+  font-size: 5.4rem;
+  margin-bottom: 2rem;
+}
+
+.intro__subtitle {
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+.settings {
+  margin: 2rem 0 4rem;
+}
+
+.settings__title {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: #212121;
+}
+.settings__title--sm {
+  font-size: 2.4rem;
+  margin-bottom: 0rem;
+}
+
+.settings__block {
+  margin-bottom: 2rem;
+  display: block;
+}
+.settings__block.hidden {
+  display: none;
+}
+.settings__block:last-child {
+  margin-top: 5rem;
+}
+
+.settings__items {
+  display: flex;
+}
+
+.settings__item {
+  color: #212121;
+  margin-right: 2.5rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 1rem 0;
+  word-spacing: -0.5rem;
+}
+.settings__item:last-child {
+  margin-right: 0;
+}
+.settings__item.active {
+  position: relative;
+}
+.settings__item.active::after {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 1.5px;
+  width: 100%;
+  background-color: #212121;
+  transition: all linear 0.5s;
+  animation: underline linear 1s;
+}
+@keyframes underline {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.settings__buttons {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.settings__input {
+  width: 40rem;
+  outline: none;
+  border: 2px solid #212121;
+  font-family: "Source Code Pro", "Arial", sans-serif;
+  padding: 2rem;
+  font-size: 1.8rem;
+  transition: all linear 0.5s;
+  margin-right: 2.5rem;
+}
+.settings__input:focus {
+  border-radius: 4rem;
+}
+
+.settings__btn {
+  outline: none;
+  border: 2px solid #212121;
+  font-family: "Source Code Pro", "Arial", sans-serif;
+  padding: 2rem 4rem;
+  font-size: 1.8rem;
+  transition: all linear 0.5s;
+}
+.settings__btn:hover, .settings__btn:focus {
+  border-radius: 4rem;
+  background-color: #fbe7ff;
+}
+
+.settings__result {
+  margin: 2rem 0;
+  font-size: 1.8rem;
+}
+
+.result__copy {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  display: none;
+}
+.result__copy.show {
+  display: block;
 }

@@ -1,6 +1,7 @@
 @import "vendor/reset";
 @import "vars";
 @import "mixins";
+@import "fonts";
 
 *, *::after, *::before {
     box-sizing: border-box;
@@ -11,7 +12,25 @@ html {
 }
 
 body {
-    background-color: black;
+    background-color: azure;
     font-size: 1.4rem;
-    color: white;
+    font-family: 'Source Code Pro', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: $black;
 }
+
+.wrapper {
+    @include container;
+
+    &--header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/intro";
+@import "blocks/settings";

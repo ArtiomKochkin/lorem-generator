@@ -1,0 +1,13 @@
+mixin footer__link(href, name)
+    a(class="footer__link", href=href, target="_blank")= name
+
+mixin footer__social(href, src, alt)
+    a(class="footer__link", href=href, target="_blank")
+        img(class="footer__img", width="40", alt=alt, src=src)
+
+mixin settings__block(name)
+        .settings__block
+            h3(class="settings__title settings__title--sm")= "Выберите " + name 
+            .settings__items
+                if block
+                    block   

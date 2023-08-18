@@ -1,0 +1,42 @@
+.footer {
+    background-color: $primary;
+}
+
+.footer__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+.footer__link {
+    margin: 0 1.5rem;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: $black;
+    transition: all linear .3s;
+
+    &:hover {
+        color: $pink;
+    }
+}
+
+.footer__socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0;
+}
+
+.footer__social {
+    margin: 0 1.5rem;
+}
+
+
+.footer__copyright {
+    color: $black;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: #ededed;
+}
