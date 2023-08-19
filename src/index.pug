@@ -27,10 +27,10 @@ html(lang="en")
                         .settings__buttons
                             input.settings__input(type="text", placeholder="Введите количество")
                             button.settings__btn(type="button") Сгенерировать
-                    .settings__block.hidden
+                    .settings__block(id="result").hidden
                         h3.settings__title.settings__title--sm Результат генерации
-                        .settings__result
-                        button.settings__btn(type="button") Скопировать
-                        .result__copy Сгенерированный текст скопирован
+                        .settings__result(id="textResult") 
+                        button.settings__btn(id="btnCopy" , type="button") Скопировать
+                        .result__copy(id="infoCopy") Сгенерированный текст скопирован
         include html/footer
         script(src="js/app.min.js") 

@@ -1,6 +1,10 @@
 .header {
     background-color: $primary;
     padding: 1.5rem 0;
+
+    @include breakpoint($mobile) {
+        padding: 1rem 0;
+    }
 }
 
 .header__logo {

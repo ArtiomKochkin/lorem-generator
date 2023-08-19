@@ -113,6 +113,11 @@ body {
   background-color: #fbe7ff;
   padding: 1.5rem 0;
 }
+@media screen and (max-width: 575px) {
+  .header {
+    padding: 1rem 0;
+  }
+}
 
 .header__logo {
   cursor: pointer;
@@ -131,6 +136,11 @@ body {
   justify-content: center;
   padding-top: 3rem;
 }
+@media screen and (max-width: 575px) {
+  .footer__links {
+    flex-direction: column;
+  }
+}
 
 .footer__link {
   margin: 0 1.5rem;
@@ -141,6 +151,11 @@ body {
 }
 .footer__link:hover {
   color: #b99999;
+}
+@media screen and (max-width: 575px) {
+  .footer__link {
+    margin-bottom: 1rem;
+  }
 }
 
 .footer__socials {
@@ -169,15 +184,31 @@ body {
   text-align: center;
   padding: 6rem 0 3rem;
 }
+@media screen and (max-width: 575px) {
+  .intro {
+    padding: 5rem 0 2rem;
+  }
+}
 
 .intro__title {
   font-size: 5.4rem;
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 575px) {
+  .intro__title {
+    font-size: 4.6rem;
+  }
+}
 
 .intro__subtitle {
   font-size: 2.2rem;
   line-height: 1.2;
+}
+@media screen and (max-width: 575px) {
+  .intro__subtitle {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
 }
 
 .settings {
@@ -192,6 +223,14 @@ body {
 .settings__title--sm {
   font-size: 2.4rem;
   margin-bottom: 0rem;
+}
+@media screen and (max-width: 768px) {
+  .settings__title {
+    font-size: 3.6rem;
+  }
+  .settings__title--sm {
+    font-size: 2.4rem;
+  }
 }
 
 .settings__block {
@@ -208,13 +247,18 @@ body {
 .settings__items {
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .settings__items {
+    flex-wrap: wrap;
+  }
+}
 
 .settings__item {
   color: #212121;
   margin-right: 2.5rem;
   font-size: 1.8rem;
   cursor: pointer;
-  padding: 1rem 0;
+  padding: 0.8rem 0;
   word-spacing: -0.5rem;
 }
 .settings__item:last-child {
@@ -243,10 +287,23 @@ body {
     width: 100%;
   }
 }
+@media screen and (max-width: 768px) {
+  .settings__item {
+    margin-bottom: 1rem;
+  }
+  .settings__item:last-child {
+    margin-bottom: 0;
+  }
+}
 
 .settings__buttons {
   margin-top: 2rem;
   display: flex;
+}
+@media screen and (max-width: 575px) {
+  .settings__buttons {
+    flex-wrap: wrap;
+  }
 }
 
 .settings__input {
@@ -258,9 +315,24 @@ body {
   font-size: 1.8rem;
   transition: all linear 0.5s;
   margin-right: 2.5rem;
+  background-color: transparent;
 }
 .settings__input:focus {
   border-radius: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .settings__input {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .settings__input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 2rem;
+    font-size: 1.6rem;
+  }
 }
 
 .settings__btn {
@@ -274,6 +346,18 @@ body {
 .settings__btn:hover, .settings__btn:focus {
   border-radius: 4rem;
   background-color: #fbe7ff;
+}
+@media screen and (max-width: 768px) {
+  .settings__btn {
+    width: 40%;
+    padding: 2rem 3rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .settings__btn {
+    width: 100%;
+    padding: 1.5rem 2rem;
+  }
 }
 
 .settings__result {
