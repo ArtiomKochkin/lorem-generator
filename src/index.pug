@@ -25,8 +25,8 @@ html(lang="en")
                     form.settings__block
                         h3.settings__title.settings__title--sm Введите количество
                         .settings__buttons
-                            input.settings__input(type="text", placeholder="Введите количество")
-                            button.settings__btn(type="button") Сгенерировать
+                            input.settings__input(id="lengthText",type="text", placeholder="Введите количество")
+                            button.settings__btn(id="btnGenerate", type="button") Сгенерировать
                     .settings__block(id="result").hidden
                         h3.settings__title.settings__title--sm Результат генерации
                         .settings__result(id="textResult") 
