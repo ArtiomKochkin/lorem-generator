@@ -21,8 +21,8 @@ export function generateLorem() {
 
         function generateText() {
             let settings = {};
-            blockResult.classList.remove("hidden");
             result.innerText = "";
+            blockResult.classList.remove("hidden");
 
             switch (activeElement[0].innerHTML) {
                 case "английский": {
@@ -34,13 +34,14 @@ export function generateLorem() {
                 }
                 break;
             }
+
             switch (activeElement[1].innerHTML) {
                 case "по количеству символов": {
                     settings.type = "characters";
                     if (settings.lang == "eng" && length < 50000) {
-                        result.innerText = engLorem.slice(0, length);
+                        generateTextByType(engLorem);
                     } else if (settings.lang = "rus" && length < 50000) {
-                        result.innerText = rusLorem.slice(0, length);
+                        generateTextByType(rusLorem);
                     } else {
                         result.innerText = "Введенное вами количество превышает допустимую отметку."
                     }
@@ -49,15 +50,9 @@ export function generateLorem() {
                 case "по количеству слов": {
                     settings.type = "words";
                     if (settings.lang == "eng" && length < 8525) {
-                        let lorem = engLorem.split(" ");
-                        for (let i = 0; i < length; i++) {
-                            result.innerText += " " + lorem[i];
-                        }
+                        generateTextByType(engLorem);
                     } else if (settings.lang = "rus" && length < 6214) {
-                        let lorem = rusLorem.split(" ");
-                        for (let i = 0; i < length; i++) {
-                            result.innerText += " " + lorem[i];
-                        }
+                        generateTextByType(rusLorem);
                     } else {
                         result.innerText = "Введенное вами количество превышает допустимую отметку."
                     }
@@ -66,22 +61,31 @@ export function generateLorem() {
                 case "по количеству предложений": {
                     settings.type = "sentences";
                     if (settings.lang == "eng" && length < 1119) {
-                        let lorem = engLorem.split(".");
-                        for (let i = 0; i < length; i++) {
-                            result.innerText += lorem[i] + ". ";
-                        }
+                        generateTextByType(engLorem);
                     } else if (settings.lang = "rus" && length < 338) {
-                        let lorem = rusLorem.split(".");
-                        for (let i = 0; i < length; i++) {
-                            result.innerText += lorem[i] + ". ";
-                        }
+                        generateTextByType(rusLorem);
                     } else {
                         result.innerText = "Введенное вами количество превышает допустимую отметку."
                     }
                 }
                 break;
             }
+
+            function generateTextByType(langOfText) {
+                if (settings.type == "characters") {
+                    result.innerText = langOfText.slice(0, length);
+                } else if (settings.type == "words") {
+                    let lorem = langOfText.split(" ");
+                    for (let i = 0; i < length; i++) {
+                        result.innerText += " " + lorem[i];
+                    }
+                } else if (settings.type == "sentences") {
+                    let lorem = langOfText.split(".");
+                    for (let i = 0; i < length; i++) {
+                        result.innerText += lorem[i] + ". ";
+                    }
+                }
+            }
         }
     }
-
 }
